@@ -13,6 +13,7 @@ def extract_bigquery_table(event, context):
      PROJECT = '<YOUR-PROJECT-ID>'
 
      bq_client = bigquery.Client()
+     print(BUCKET_NAME)
 
      file_name = f"{dataset_id}_{table_id}.json.gz"
      destination_uri = f"gs://{BUCKET_NAME}/{file_name}"
